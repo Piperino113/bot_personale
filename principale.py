@@ -11,12 +11,12 @@ from telegram.ext import (
 
 
 # import personalizzati
-from impostazioni import TOKEN
+from impostazioni import BOT_TOKEN
 from gestori.auto import auto, gestione_risposte_auto
 from gestori.auto import callback_auto
 
 # creo il bot
-application = Application.builder().token(TOKEN).build()
+application = Application.builder().token(BOT_TOKEN).build()
 
 # Handlers
 application.add_handler(CommandHandler("auto", auto))  # chiama la funzione auto() quando arriva /auto
